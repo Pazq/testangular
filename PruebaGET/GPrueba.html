@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="appprob">
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Http Examples</title>
+</head>
+<body ng-controller="nControllr">
+
+<input type="text" ng-model="newPost.user"/>
+<br>
+<input type="text" ng-model="newPost.pwr"/>
+
+<button ng-click="addPost()">Enviar post</button>
+<ul>
+    <li ng-repeat="varpost in posts">
+        <h2>{{varpost.user}}</h2>
+        <p>
+            {{varpost.pwr}}
+        </p>
+    </li>
+</ul>
+
+
+<script src="../libs/angular.min.js"></script>
+<script src="getPrueba.js"></script>
+</body>
+</html>

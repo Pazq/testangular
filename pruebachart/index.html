@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+  <meta charset="utf-8" />
+  <title>AngularJS Plunker</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <script data-require="angular.js@1.4.x" src="https://code.angularjs.org/1.4.0-rc.0/angular.js" data-semver="1.4.0-rc.0"></script>
+  <script src="chart.js"></script>
+  <script src="d3.js"></script>
+  <link rel="stylesheet" href="angularchart.css" />
+  <script src="angularchart.js"></script>
+  <script src="app.js"></script>
+</head>
+
+<body>
+
+<div class="chart-container" ng-controller='MainCtrl' ng-show="graph.visible">
+  <canvas height="50"
+          class="chart chart-line"
+          data="graph.data"
+          labels="graph.labels"
+          series="graph.series"
+          options="graph.options"
+          legend="graph.legend"
+  >
+  </canvas>
+</div>
+
+<div class="chart-container" ng-controller='2MainCtrl' ng-show="graphb.visible">
+  <canvas height="50"
+          class="chart chart-bar"
+          data="graphb.data"
+          labels="graphb.labels"
+          series="graphb.series"
+          options="graphb.options"
+          legend="graphb.legend"
+  >
+  </canvas>
+</div>
+
+<div class="chart-container" ng-controller='3MainCtrl' ng-show="graphc.visible">
+  <canvas height="50"
+          class="chart chart-doughnut"
+          data="graphc.data"
+          labels="graphc.labels"
+
+  >
+  </canvas>
+</div>
+
+
+</body>
+
+</html>
